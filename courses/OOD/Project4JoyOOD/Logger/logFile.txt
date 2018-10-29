@@ -1,0 +1,8 @@
+
+                                         DEPENDENCY ANALYZER
+    ==============================================================================================
+     Mon Mar 20 02:09:44 2017
+     Path: "C:\OOD\Dependency_Analyzer_Project_2\Logger"
+     Args: *.cpp, *.h, /f, /r, ..\MyXML.xml
+                                                                               
+

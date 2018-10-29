@@ -1,0 +1,81 @@
+<!DOCTYPE html><html><head><link href = "Style.css" rel="stylesheet" type ="text/css"><script src="Script.js" type="text/javascript"></script><h1>..\MockChannel\MockChannel.h</h1><h4>!----------------------------------------------------------------------------</h4>..\MockChannel\MockChannel.h<h4>--Code Publisher</h4><h4>Published 02 Apr 2017</h4><h4>Author: Joy Shalom Soosai Michael, CSE687 - Object Oriented Design, Spring 2017</h4><h4>Credits and source: Prof.Jim Fawcett</h4><h4>-----------------------------------------------------------------------------></h4><h4>Dependencies:</h4><pre>#ifndef MOCKCHANNEL_H
+#define MOCKCHANNEL_H
+
+//////////////////////////////////////////////////////////////////////////////
+// MockChannel.h - Demo for CSE687 Project #4, Spring 2017                  //
+// - build as DLL to show how C++\CLI client can use native code channel    //
+// - MockChannel reads from sendQ and writes to recvQ                       //
+// Version     : 1.0                                                        //
+// Language    : Visual C++, Visual Studio 2015                             //
+// Platform    : Dell Inspiron 15 7000Series, Core-i5,                      //
+//               Windows 10                                                 //
+// Application : Code Publisher                                             //
+// Author      : Joy Shalom Soosai Michael                                  //
+//               jsoosaim@syr.edu,SUID : 699737418                          //
+// Credits                                                                  //
+// and source  : Dr.Jim Fawcett, Syracuse University                        //
+//                      jfawcett@twcny.rr.com                               //
+//////////////////////////////////////////////////////////////////////////////
+
+// Credits
+// --------
+// I would like to give credits to Prof. Jim W Fawcett, Syracuse University
+// for explaining how the remote code Publisher should work and giving a start up code.
+/*
+* Package Operations:
+* -------------------
+* This package builds as DLL to show how C++\CLI client can use native code channel 
+* MockChannel reads from sendQ and writes to recvQ
+*
+* Required Files:
+* ---------------
+* MockChannel.h, Cpp11-BlockingQueue.h
+*
+* Build Process:
+* --------------
+* devenv MockChannel.sln /rebuild debug
+*
+* Maintenance History:
+* --------------------
+*  ver 1.0 - Build on top of Initial release by Prof. Jim Fawcett
+*/
+
+#ifdef IN_DLL
+#define DLL_DECL __declspec(dllexport)
+#else
+#define DLL_DECL __declspec(dllimport)
+#endif
+
+#include &ltstring&gt
+using Message = std::string;
+
+struct ISendr
+<pre id='a21' onclick="toggle_visibility('a11', 'a21');">[-]</pre> { <pre id='a11'>
+  virtual void postMessage(const Message& msg) = 0;
+</pre> }<br /><br />;
+
+struct IRecvr
+<pre id='a22' onclick="toggle_visibility('a12', 'a22');">[-]</pre> { <pre id='a12'>
+  virtual std::string getMessage() = 0;
+</pre> }<br /><br />;
+
+struct IMockChannel
+<pre id='a23' onclick="toggle_visibility('a13', 'a23');">[-]</pre> { <pre id='a13'>
+public:
+  virtual void start() = 0;
+  virtual void stop() = 0;
+</pre> }<br /><br />;
+
+extern "C" <pre id='a24' onclick="toggle_visibility('a14', 'a24');">[-]</pre> { <pre id='a14'>
+  struct ObjectFactory
+  <pre id='a25' onclick="toggle_visibility('a15', 'a25');">[-]</pre> { <pre id='a15'>
+    DLL_DECL ISendr* createSendr();
+    DLL_DECL IRecvr* createRecvr();
+    DLL_DECL IMockChannel* createMockChannel(ISendr* pISendr, IRecvr* pIRecvr);
+  </pre> }<br /><br />;
+</pre> }<br /><br />
+
+#endif
+
+
+</pre></body></html>

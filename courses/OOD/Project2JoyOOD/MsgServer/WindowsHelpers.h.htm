@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head><link href = "Style.css" rel="stylesheet" type ="text/css"><script src="Script.js" type="text/javascript"></script><h1>WindowsHelpers.h</h1><h4>!----------------------------------------------------------------------------</h4>WindowsHelpers.h<h4>--Code Publisher</h4><h4>Published 02 Apr 2017</h4><h4>Author: Joy Shalom Soosai Michael, CSE687 - Object Oriented Design, Spring 2017</h4><h4>Credits and source: Prof.Jim Fawcett</h4><h4>-----------------------------------------------------------------------------></h4><h4>Dependencies:</h4><pre>#ifndef WINDOWSHELPERS_H
+#define WINDOWSHELPERS_H
+/////////////////////////////////////////////////////////////////////
+// WindowsHelper.h - small helper functions for using Windows API  //
+// ver 1.0                                                         //
+//-----------------------------------------------------------------//
+// Jim Fawcett (c) copyright 2015                                  //
+// All rights granted provided this copyright notice is retained   //
+//-----------------------------------------------------------------//
+// Language:    C++, Visual Studio 2015                            //
+// Application: Several Projects, CSE687 - Object Oriented Design  //
+// Author:      Jim Fawcett, Syracuse University, CST 4-187        //
+//              jfawcett@twcny.rr.com                              //
+/////////////////////////////////////////////////////////////////////
+/*
+* Package Operations:
+* -------------------
+* This package supports programming to the Windows API.  It currently
+* contains three global functions that convert strings to and from
+* UTF-16, and retrieving error messages.
+*
+* Build Process:
+* --------------
+* Required Files: WindowsHelper.h, WindowwsHelper.cpp
+*
+* Build Command: devenv WindowsHelper.sln /rebuild debug
+*
+* Maintenance History:
+* --------------------
+* ver 1.0 : 22 Feb 2016
+* - first release
+*
+* Planned Additions and Changes:
+* ------------------------------
+* - none yet
+*/
+
+#include &ltstring&gt
+#include &ltvector&gt
+
+namespace WindowsHelpers
+<pre id='a21' onclick="toggle_visibility('a11', 'a21');">[-]</pre> { <pre id='a11'>
+	std::string wstringToString(const std::wstring& wstr);
+	std::wstring stringToWideString(const std::string& str);
+	std::string GetLastMsg(bool wantSocketMessage);
+</pre> }<br /><br />
+
+#endif
+</pre></body></html>

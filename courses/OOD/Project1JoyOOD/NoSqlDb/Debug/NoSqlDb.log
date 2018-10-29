@@ -1,0 +1,24 @@
+﻿  NoSqlDb.cpp
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.h(67): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(79): warning C4018: '<': signed/unsigned mismatch
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(116): warning C4018: '<': signed/unsigned mismatch
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(153): warning C4018: '<': signed/unsigned mismatch
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(189): warning C4018: '<': signed/unsigned mismatch
+c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.h(105): warning C4018: '<': signed/unsigned mismatch
+  c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.h(98): note: while compiling class template member function 'std::string Database<Info>::show(void)'
+          with
+          [
+              Info=StringData
+          ]
+  c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(92): note: see reference to function template instantiation 'std::string Database<Info>::show(void)' being compiled
+          with
+          [
+              Info=StringData
+          ]
+  c:\users\joy shalom\desktop\project 1-nosqlcode\nosqldb\nosqldb.cpp(65): note: see reference to class template instantiation 'Database<Info>' being compiled
+          with
+          [
+              Info=StringData
+          ]
+  NoSqlDb.vcxproj -> C:\Users\Joy Shalom\Desktop\Project 1-NoSqlCode\Project1Joy\Debug\NoSqlDb.exe
+  NoSqlDb.vcxproj -> C:\Users\Joy Shalom\Desktop\Project 1-NoSqlCode\Project1Joy\Debug\NoSqlDb.pdb (Full PDB)
